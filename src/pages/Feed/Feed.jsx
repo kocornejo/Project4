@@ -42,6 +42,17 @@ export default function Feed({ loggedUser, handleLogout }) {
     }
   }
 
+  async function deleteMe(postId) {
+    console.log(postId)
+    try {
+        const response = await postsAPI.deleteMe(postId);
+        getPosts();
+    } catch (err) {
+        console.log(err);
+        setError("error removing like");
+    }
+  }
+
   async function handleAddPost(post) {
    
     try {
@@ -50,7 +61,8 @@ export default function Feed({ loggedUser, handleLogout }) {
 
       
       console.log(response);
-      setPosts([response.data, ...posts]); 
+    //   setPosts([response.data, ...posts]);
+    getPosts() 
       setLoading(false);
     } catch (err) {
 
@@ -116,6 +128,7 @@ export default function Feed({ loggedUser, handleLogout }) {
             loading={loading}
             addLike={addLike}
             removeLike={removeLike}
+            deleteMe={deleteMe}
             loggedUser={loggedUser}
           />
         </Grid.Column>

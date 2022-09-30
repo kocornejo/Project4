@@ -9,7 +9,19 @@ const BUCKET_NAME = process.env.AWS_BUCKET_NAME;
 module.exports = {
   create,
   index,
+  deleteMe
 };
+
+
+async function deleteMe(req, res) {
+  try {
+
+    await Post.findByIdAndDelete(req.params)
+    res.status(200).json({});
+  } catch (err) {
+    res.status(400).json({ err });
+  }
+}
 
 function create(req, res) {
   console.log(req.body, req.file, req.user); 

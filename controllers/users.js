@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Post = require("../models/post");
 const jwt = require('jsonwebtoken');
 const S3 = require("aws-sdk/clients/s3");
 const s3 = new S3();
@@ -11,10 +12,10 @@ const SECRET = process.env.SECRET
 module.exports = {
   signup,
   login,
-  profile
+  getProfile
 };
 
-async function profile(req, res) {
+async function getProfile(req, res) {
   try {
     const user = await User.findOne({ username: req.params.username });
     if (!user) return res.status(404).json({ error: "User not found" });

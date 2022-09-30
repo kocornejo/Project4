@@ -1,19 +1,22 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Icon, Image, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
+function PostCard({ post, isProfile, addLike, removeLike, deleteMe, loggedUser }) {
 
   const likedIndex = post.likes.findIndex(
     (like) => like.username === loggedUser.username
   );
 
+  const deleteHandler =
+    () => { deleteMe(post._id) }
+
 
   const likeColor = likedIndex > -1 ? "red" : "grey";
-                     
+
   const clickHandler =
     likedIndex > -1
       ? () => removeLike(post.likes[likedIndex]._id)
-      : () => addLike(post._id);  
+      : () => addLike(post._id);
   return (
     <Card key={post._id} raised>
       {isProfile ? (
@@ -49,6 +52,17 @@ function PostCard({ post, isProfile, addLike, removeLike, loggedUser }) {
           onClick={clickHandler}
         />
         {post.likes.length} Likes
+      </Card.Content>
+      <Card.Content>
+        <Button
+          color="violet"
+          fluid
+          size="large"
+          type="submit"
+          className="btn"
+          onClick={deleteHandler}
+        >Delete</Button>
+        
       </Card.Content>
     </Card>
   );
