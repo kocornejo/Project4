@@ -46,7 +46,7 @@ function PostCard({ post, isProfile, addLike, removeLike, deleteMe, loggedUser }
       </Card.Content>
       <Card.Content extra textAlign={"right"}>
         <Icon
-          name={"heart"}
+          name={"studiovinari"}
           size="large"
           color={likeColor}
           onClick={clickHandler}
@@ -57,11 +57,17 @@ function PostCard({ post, isProfile, addLike, removeLike, deleteMe, loggedUser }
         <Button
           color="violet"
           fluid
-          size="large"
+          size="small"
           type="submit"
           className="btn"
           onClick={deleteHandler}
         >Delete</Button>
+        {/* <Icon 
+          name={"user secret icon"}
+          size="large"
+          onclick={deleteHandler}
+        />
+         Delete */}
         
       </Card.Content>
     </Card>

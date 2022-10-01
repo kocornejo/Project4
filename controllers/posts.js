@@ -16,7 +16,7 @@ module.exports = {
 async function deleteMe(req, res) {
   try {
 
-    await Post.findByIdAndDelete(req.params)
+    await Post.findOneAndDelete({_id: req.params.id})
     res.status(200).json({});
   } catch (err) {
     res.status(400).json({ err });
