@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
 
+
 export default function AddPostForm(props) {
   const [state, setState] = useState({
     caption: "",

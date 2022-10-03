@@ -86,7 +86,7 @@ export default function SignUpPage(props) {
       verticalAlign="middle"
     >
       <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" color="violet" textAlign="center">
+        <Header as="h2" color="black" textAlign="center">
           <Image src="https://i.imgur.com/gJ4XMmZ.jpg" /> Sign Up
         </Header>
         <Form onSubmit={handleSubmit}>
@@ -124,13 +124,7 @@ export default function SignUpPage(props) {
               onChange={handleChange}
               required
             />
-            <Form.TextArea
-              label="bio"
-              name="bio"
-              placeholder="Tell us..."
-              value={state.bio}
-              onChange={handleChange}
-            />
+
             <Form.Field>
               <Form.Input
                 type="file"

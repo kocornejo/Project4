@@ -5,9 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+background-color: #0C1622;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.ui.segment {
+  background: #23444B;
+}
+
+.ui.card, .ui.cards>.card {
+  background: #628D7C;
+}
+
+a {
+  color : #628D7C;
 }

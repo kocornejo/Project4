@@ -55,7 +55,7 @@ function PostCard({ post, isProfile, addLike, removeLike, deleteMe, loggedUser }
       </Card.Content>
       <Card.Content>
         <Button
-          color="violet"
+          color="black"
           fluid
           size="small"
           type="submit"

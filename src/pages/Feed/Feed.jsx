@@ -10,6 +10,8 @@ import { Grid } from "semantic-ui-react";
 
 import * as postsAPI from "../../utils/postApi";
 import * as likesAPI from "../../utils/likesApi";
+// import forestvid from '../assets/forest.mp4';
+
 
 
 export default function Feed({ loggedUser, handleLogout }) {

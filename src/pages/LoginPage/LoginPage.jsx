@@ -19,6 +19,7 @@ export default function LoginPage(props) {
     email: "",
     password: "",
   });
+  
 
   const navigate = useNavigate();
 
@@ -45,13 +46,14 @@ export default function LoginPage(props) {
   }
 
   return (
+    
       <Grid
         textAlign="center"
         style={{ height: "100vh", width: "100vw" }}
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="violet" textAlign="center">
+          <Header as="h2" color="black" textAlign="center">
             <Image src="https://i.imgur.com/gJ4XMmZ.jpg" /> Log-in to your
             account
           </Header>
@@ -74,7 +76,7 @@ export default function LoginPage(props) {
                 required
               />
               <Button
-                color="violet"
+                color="black"
                 fluid
                 size="large"
                 type="submit"
