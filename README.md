@@ -7,13 +7,13 @@
 # Screenshots of app
 
 ###### login page
-![](/assets/login.png)
+![](assets/login.png)
 ###### signup page
-![](/assets/signup.png)
+![](assets/signup.png)
 ###### feed page
-![](/assets.feed.png)
+![](assets.feed.png)
 ###### bio page
-![](/assets/bio.png)
+![](assets/bio.png)
 
 ## Technologies used
 React
