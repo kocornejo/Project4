@@ -11,7 +11,7 @@
 ###### signup page
 ![](public/assets/signup.png)
 ###### feed page
-![](public/assets.feed.png)
+![](public/assets/feed.png)
 ###### bio page
 ![](public/assets/bio.png)
 
@@ -22,3 +22,6 @@ semantic ui
 AWS
 
 
+# Link to app
+
+https://cryptigram.herokuapp.com
